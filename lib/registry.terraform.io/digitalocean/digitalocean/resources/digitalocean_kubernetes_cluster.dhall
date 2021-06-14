@@ -1,5 +1,6 @@
 { Type =
-    { cluster_subnet : Optional Text
+    { auto_upgrade : Optional Bool
+    , cluster_subnet : Optional Text
     , created_at : Optional Text
     , endpoint : Optional Text
     , id : Optional Text
@@ -20,6 +21,7 @@
     , region : Text
     , service_subnet : Optional Text
     , status : Optional Text
+    , surge_upgrade : Optional Bool
     , tags : Optional (List Text)
     , updated_at : Optional Text
     , version : Text
@@ -50,7 +52,8 @@
           }
     }
 , default =
-  { cluster_subnet = None Text
+  { auto_upgrade = None Bool
+  , cluster_subnet = None Text
   , created_at = None Text
   , endpoint = None Text
   , id = None Text
@@ -69,6 +72,7 @@
         )
   , service_subnet = None Text
   , status = None Text
+  , surge_upgrade = None Bool
   , tags = None (List Text)
   , updated_at = None Text
   , vpc_uuid = None Text

@@ -14,7 +14,15 @@
               , vcpus : Natural
               }
           )
-    , filter : Optional (List { key : Text, values : List Text })
+    , filter :
+        Optional
+          ( List
+              { all : Optional Bool
+              , key : Text
+              , match_by : Optional Text
+              , values : List Text
+              }
+          )
     , sort : Optional (List { direction : Optional Text, key : Text })
     }
 , default =
@@ -33,7 +41,15 @@
             , vcpus : Natural
             }
         )
-  , filter = None (List { key : Text, values : List Text })
+  , filter =
+      None
+        ( List
+            { all : Optional Bool
+            , key : Text
+            , match_by : Optional Text
+            , values : List Text
+            }
+        )
   , sort = None (List { direction : Optional Text, key : Text })
   }
 }

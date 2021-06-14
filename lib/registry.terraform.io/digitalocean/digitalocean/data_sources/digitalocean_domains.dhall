@@ -1,15 +1,6 @@
 { Type =
-    { id : Optional Text
-    , regions :
-        Optional
-          ( List
-              { available : Bool
-              , features : List Text
-              , name : Text
-              , sizes : List Text
-              , slug : Text
-              }
-          )
+    { domains : Optional (List { name : Text, ttl : Natural, urn : Text })
+    , id : Optional Text
     , filter :
         Optional
           ( List
@@ -22,17 +13,8 @@
     , sort : Optional (List { direction : Optional Text, key : Text })
     }
 , default =
-  { id = None Text
-  , regions =
-      None
-        ( List
-            { available : Bool
-            , features : List Text
-            , name : Text
-            , sizes : List Text
-            , slug : Text
-            }
-        )
+  { domains = None (List { name : Text, ttl : Natural, urn : Text })
+  , id = None Text
   , filter =
       None
         ( List

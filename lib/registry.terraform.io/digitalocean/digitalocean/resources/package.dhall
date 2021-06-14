@@ -1,4 +1,5 @@
-{ digitalocean_cdn = ./digitalocean_cdn.dhall
+{ digitalocean_app = ./digitalocean_app.dhall
+, digitalocean_cdn = ./digitalocean_cdn.dhall
 , digitalocean_certificate = ./digitalocean_certificate.dhall
 , digitalocean_container_registry = ./digitalocean_container_registry.dhall
 , digitalocean_container_registry_docker_credentials =

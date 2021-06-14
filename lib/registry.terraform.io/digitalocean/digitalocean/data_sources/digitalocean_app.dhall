@@ -19,6 +19,8 @@
                     , version : Text
                     }
               , domains : List Text
+              , env :
+                  List { key : Text, scope : Text, type : Text, value : Text }
               , name : Text
               , region : Text
               , service :
@@ -35,6 +37,9 @@
                     , environment_slug : Text
                     , git : List { branch : Text, repo_clone_url : Text }
                     , github :
+                        List
+                          { branch : Text, deploy_on_push : Bool, repo : Text }
+                    , gitlab :
                         List
                           { branch : Text, deploy_on_push : Bool, repo : Text }
                     , health_check :
@@ -57,6 +62,7 @@
               , static_site :
                   List
                     { build_command : Text
+                    , catchall_document : Text
                     , dockerfile_path : Text
                     , env :
                         List
@@ -69,6 +75,9 @@
                     , error_document : Text
                     , git : List { branch : Text, repo_clone_url : Text }
                     , github :
+                        List
+                          { branch : Text, deploy_on_push : Bool, repo : Text }
+                    , gitlab :
                         List
                           { branch : Text, deploy_on_push : Bool, repo : Text }
                     , index_document : Text
@@ -91,6 +100,9 @@
                     , environment_slug : Text
                     , git : List { branch : Text, repo_clone_url : Text }
                     , github :
+                        List
+                          { branch : Text, deploy_on_push : Bool, repo : Text }
+                    , gitlab :
                         List
                           { branch : Text, deploy_on_push : Bool, repo : Text }
                     , instance_count : Natural
@@ -124,6 +136,7 @@
                   , version : Text
                   }
             , domains : List Text
+            , env : List { key : Text, scope : Text, type : Text, value : Text }
             , name : Text
             , region : Text
             , service :
@@ -136,6 +149,8 @@
                   , environment_slug : Text
                   , git : List { branch : Text, repo_clone_url : Text }
                   , github :
+                      List { branch : Text, deploy_on_push : Bool, repo : Text }
+                  , gitlab :
                       List { branch : Text, deploy_on_push : Bool, repo : Text }
                   , health_check :
                       List
@@ -157,6 +172,7 @@
             , static_site :
                 List
                   { build_command : Text
+                  , catchall_document : Text
                   , dockerfile_path : Text
                   , env :
                       List
@@ -165,6 +181,8 @@
                   , error_document : Text
                   , git : List { branch : Text, repo_clone_url : Text }
                   , github :
+                      List { branch : Text, deploy_on_push : Bool, repo : Text }
+                  , gitlab :
                       List { branch : Text, deploy_on_push : Bool, repo : Text }
                   , index_document : Text
                   , name : Text
@@ -182,6 +200,8 @@
                   , environment_slug : Text
                   , git : List { branch : Text, repo_clone_url : Text }
                   , github :
+                      List { branch : Text, deploy_on_push : Bool, repo : Text }
+                  , gitlab :
                       List { branch : Text, deploy_on_push : Bool, repo : Text }
                   , instance_count : Natural
                   , instance_size_slug : Text

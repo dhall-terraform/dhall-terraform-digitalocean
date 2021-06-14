@@ -23,6 +23,15 @@
                         , version : Optional Text
                         }
                     )
+              , env :
+                  Optional
+                    ( List
+                        { key : Optional Text
+                        , scope : Optional Text
+                        , type : Optional Text
+                        , value : Optional Text
+                        }
+                    )
               , service :
                   Optional
                     ( List
@@ -59,6 +68,14 @@
                                   , repo : Optional Text
                                   }
                               )
+                        , gitlab :
+                            Optional
+                              ( List
+                                  { branch : Optional Text
+                                  , deploy_on_push : Optional Bool
+                                  , repo : Optional Text
+                                  }
+                              )
                         , health_check :
                             Optional
                               ( List
@@ -77,6 +94,7 @@
                   Optional
                     ( List
                         { build_command : Optional Text
+                        , catchall_document : Optional Text
                         , dockerfile_path : Optional Text
                         , environment_slug : Optional Text
                         , error_document : Optional Text
@@ -101,6 +119,14 @@
                                   }
                               )
                         , github :
+                            Optional
+                              ( List
+                                  { branch : Optional Text
+                                  , deploy_on_push : Optional Bool
+                                  , repo : Optional Text
+                                  }
+                              )
+                        , gitlab :
                             Optional
                               ( List
                                   { branch : Optional Text
@@ -146,6 +172,14 @@
                                   , repo : Optional Text
                                   }
                               )
+                        , gitlab :
+                            Optional
+                              ( List
+                                  { branch : Optional Text
+                                  , deploy_on_push : Optional Bool
+                                  , repo : Optional Text
+                                  }
+                              )
                         , routes : Optional (List { path : Optional Text })
                         }
                     )
@@ -175,6 +209,15 @@
                       , name : Optional Text
                       , production : Optional Bool
                       , version : Optional Text
+                      }
+                  )
+            , env :
+                Optional
+                  ( List
+                      { key : Optional Text
+                      , scope : Optional Text
+                      , type : Optional Text
+                      , value : Optional Text
                       }
                   )
             , service :
@@ -213,6 +256,14 @@
                                 , repo : Optional Text
                                 }
                             )
+                      , gitlab :
+                          Optional
+                            ( List
+                                { branch : Optional Text
+                                , deploy_on_push : Optional Bool
+                                , repo : Optional Text
+                                }
+                            )
                       , health_check :
                           Optional
                             ( List
@@ -231,6 +282,7 @@
                 Optional
                   ( List
                       { build_command : Optional Text
+                      , catchall_document : Optional Text
                       , dockerfile_path : Optional Text
                       , environment_slug : Optional Text
                       , error_document : Optional Text
@@ -255,6 +307,14 @@
                                 }
                             )
                       , github :
+                          Optional
+                            ( List
+                                { branch : Optional Text
+                                , deploy_on_push : Optional Bool
+                                , repo : Optional Text
+                                }
+                            )
+                      , gitlab :
                           Optional
                             ( List
                                 { branch : Optional Text
@@ -293,6 +353,14 @@
                                 }
                             )
                       , github :
+                          Optional
+                            ( List
+                                { branch : Optional Text
+                                , deploy_on_push : Optional Bool
+                                , repo : Optional Text
+                                }
+                            )
+                      , gitlab :
                           Optional
                             ( List
                                 { branch : Optional Text

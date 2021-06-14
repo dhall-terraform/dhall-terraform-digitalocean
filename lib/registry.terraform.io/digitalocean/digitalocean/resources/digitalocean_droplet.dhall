@@ -8,7 +8,6 @@
     , ipv4_address_private : Optional Text
     , ipv6 : Optional Bool
     , ipv6_address : Optional Text
-    , ipv6_address_private : Optional Text
     , locked : Optional Bool
     , memory : Optional Natural
     , monitoring : Optional Bool
@@ -37,7 +36,6 @@
   , ipv4_address_private = None Text
   , ipv6 = None Bool
   , ipv6_address = None Text
-  , ipv6_address_private = None Text
   , locked = None Bool
   , memory = None Natural
   , monitoring = None Bool

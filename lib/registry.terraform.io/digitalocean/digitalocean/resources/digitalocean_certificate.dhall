@@ -9,6 +9,7 @@
     , sha1_fingerprint : Optional Text
     , state : Optional Text
     , type : Optional Text
+    , uuid : Optional Text
     }
 , default =
   { certificate_chain = None Text
@@ -20,5 +21,6 @@
   , sha1_fingerprint = None Text
   , state = None Text
   , type = None Text
+  , uuid = None Text
   }
 }

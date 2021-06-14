@@ -15,6 +15,7 @@
     , forwarding_rule :
         List
           { certificate_id : Optional Text
+          , certificate_name : Optional Text
           , entry_port : Natural
           , entry_protocol : Text
           , target_port : Natural

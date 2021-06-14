@@ -1,5 +1,6 @@
 { Type =
     { created : Optional Text
+    , description : Optional Text
     , distribution : Optional Text
     , error_message : Optional Text
     , id : Optional Natural
@@ -17,6 +18,7 @@
     }
 , default =
   { created = None Text
+  , description = None Text
   , distribution = None Text
   , error_message = None Text
   , id = None Natural

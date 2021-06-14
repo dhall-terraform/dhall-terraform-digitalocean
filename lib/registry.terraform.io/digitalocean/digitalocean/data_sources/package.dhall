@@ -17,6 +17,7 @@
 , digitalocean_project = ./digitalocean_project.dhall
 , digitalocean_projects = ./digitalocean_projects.dhall
 , digitalocean_record = ./digitalocean_record.dhall
+, digitalocean_records = ./digitalocean_records.dhall
 , digitalocean_region = ./digitalocean_region.dhall
 , digitalocean_regions = ./digitalocean_regions.dhall
 , digitalocean_sizes = ./digitalocean_sizes.dhall

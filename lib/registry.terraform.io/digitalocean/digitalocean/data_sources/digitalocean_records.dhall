@@ -1,23 +1,20 @@
 { Type =
-    { id : Optional Text
-    , images :
+    { domain : Text
+    , id : Optional Text
+    , records :
         Optional
           ( List
-              { created : Text
-              , description : Text
-              , distribution : Text
-              , error_message : Text
+              { domain : Text
+              , flags : Natural
               , id : Natural
-              , image : Text
-              , min_disk_size : Natural
               , name : Text
-              , private : Bool
-              , regions : List Text
-              , size_gigabytes : Natural
-              , slug : Text
-              , status : Text
-              , tags : List Text
+              , port : Natural
+              , priority : Natural
+              , tag : Text
+              , ttl : Natural
               , type : Text
+              , value : Text
+              , weight : Natural
               }
           )
     , filter :
@@ -33,24 +30,20 @@
     }
 , default =
   { id = None Text
-  , images =
+  , records =
       None
         ( List
-            { created : Text
-            , description : Text
-            , distribution : Text
-            , error_message : Text
+            { domain : Text
+            , flags : Natural
             , id : Natural
-            , image : Text
-            , min_disk_size : Natural
             , name : Text
-            , private : Bool
-            , regions : List Text
-            , size_gigabytes : Natural
-            , slug : Text
-            , status : Text
-            , tags : List Text
+            , port : Natural
+            , priority : Natural
+            , tag : Text
+            , ttl : Natural
             , type : Text
+            , value : Text
+            , weight : Natural
             }
         )
   , filter =

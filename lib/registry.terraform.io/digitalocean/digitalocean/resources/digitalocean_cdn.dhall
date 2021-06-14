@@ -1,5 +1,6 @@
 { Type =
     { certificate_id : Optional Text
+    , certificate_name : Optional Text
     , created_at : Optional Text
     , custom_domain : Optional Text
     , endpoint : Optional Text
@@ -9,6 +10,7 @@
     }
 , default =
   { certificate_id = None Text
+  , certificate_name = None Text
   , created_at = None Text
   , custom_domain = None Text
   , endpoint = None Text

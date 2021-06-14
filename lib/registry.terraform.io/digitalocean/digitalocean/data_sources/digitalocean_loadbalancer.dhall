@@ -8,6 +8,7 @@
         Optional
           ( List
               { certificate_id : Text
+              , certificate_name : Text
               , entry_port : Natural
               , entry_protocol : Text
               , target_port : Natural
@@ -52,6 +53,7 @@
       None
         ( List
             { certificate_id : Text
+            , certificate_name : Text
             , entry_port : Natural
             , entry_protocol : Text
             , target_port : Natural

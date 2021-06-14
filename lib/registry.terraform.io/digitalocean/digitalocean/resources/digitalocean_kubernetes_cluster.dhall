@@ -24,6 +24,7 @@
     , surge_upgrade : Optional Bool
     , tags : Optional (List Text)
     , updated_at : Optional Text
+    , urn : Optional Text
     , version : Text
     , vpc_uuid : Optional Text
     , node_pool :
@@ -76,6 +77,7 @@
   , surge_upgrade = None Bool
   , tags = None (List Text)
   , updated_at = None Text
+  , urn = None Text
   , vpc_uuid = None Text
   }
 }

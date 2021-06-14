@@ -49,6 +49,7 @@
     , surge_upgrade : Optional Bool
     , tags : Optional (List Text)
     , updated_at : Optional Text
+    , urn : Optional Text
     , version : Optional Text
     , vpc_uuid : Optional Text
     }
@@ -102,6 +103,7 @@
   , surge_upgrade = None Bool
   , tags = None (List Text)
   , updated_at = None Text
+  , urn = None Text
   , version = None Text
   , vpc_uuid = None Text
   }

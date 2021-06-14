@@ -8,6 +8,7 @@
 , digitalocean_droplet = ./digitalocean_droplet.dhall
 , digitalocean_droplets = ./digitalocean_droplets.dhall
 , digitalocean_droplet_snapshot = ./digitalocean_droplet_snapshot.dhall
+, digitalocean_firewall = ./digitalocean_firewall.dhall
 , digitalocean_floating_ip = ./digitalocean_floating_ip.dhall
 , digitalocean_image = ./digitalocean_image.dhall
 , digitalocean_images = ./digitalocean_images.dhall

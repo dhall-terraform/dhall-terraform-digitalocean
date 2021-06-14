@@ -3,6 +3,7 @@
 , digitalocean_certificate = ./digitalocean_certificate.dhall
 , digitalocean_container_registry = ./digitalocean_container_registry.dhall
 , digitalocean_database_cluster = ./digitalocean_database_cluster.dhall
+, digitalocean_database_replica = ./digitalocean_database_replica.dhall
 , digitalocean_domain = ./digitalocean_domain.dhall
 , digitalocean_domains = ./digitalocean_domains.dhall
 , digitalocean_droplet = ./digitalocean_droplet.dhall

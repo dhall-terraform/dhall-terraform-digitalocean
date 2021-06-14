@@ -4,6 +4,7 @@
 , digitalocean_container_registry = ./digitalocean_container_registry.dhall
 , digitalocean_container_registry_docker_credentials =
     ./digitalocean_container_registry_docker_credentials.dhall
+, digitalocean_custom_image = ./digitalocean_custom_image.dhall
 , digitalocean_database_cluster = ./digitalocean_database_cluster.dhall
 , digitalocean_database_connection_pool =
     ./digitalocean_database_connection_pool.dhall

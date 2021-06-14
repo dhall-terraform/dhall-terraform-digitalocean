@@ -27,6 +27,7 @@
     ./digitalocean_spaces_bucket_objects.dhall
 , digitalocean_spaces_buckets = ./digitalocean_spaces_buckets.dhall
 , digitalocean_ssh_key = ./digitalocean_ssh_key.dhall
+, digitalocean_ssh_keys = ./digitalocean_ssh_keys.dhall
 , digitalocean_tag = ./digitalocean_tag.dhall
 , digitalocean_tags = ./digitalocean_tags.dhall
 , digitalocean_volume = ./digitalocean_volume.dhall

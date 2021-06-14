@@ -49,6 +49,7 @@
                 )
           , size : Text
           , tags : Optional (List Text)
+          , taint : Optional (List { effect : Text, key : Text, value : Text })
           }
     }
 , default =

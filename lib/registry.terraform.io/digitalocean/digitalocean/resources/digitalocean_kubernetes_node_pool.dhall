@@ -21,6 +21,7 @@
           )
     , size : Text
     , tags : Optional (List Text)
+    , taint : Optional (List { effect : Text, key : Text, value : Text })
     }
 , default =
   { actual_node_count = None Natural
@@ -42,5 +43,6 @@
             }
         )
   , tags = None (List Text)
+  , taint = None (List { effect : Text, key : Text, value : Text })
   }
 }

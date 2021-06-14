@@ -40,6 +40,7 @@
                     }
               , size : Text
               , tags : List Text
+              , taint : List { effect : Text, key : Text, value : Text }
               }
           )
     , region : Optional Text
@@ -92,6 +93,7 @@
                   }
             , size : Text
             , tags : List Text
+            , taint : List { effect : Text, key : Text, value : Text }
             }
         )
   , region = None Text

@@ -18,9 +18,45 @@
                     , production : Bool
                     , version : Text
                     }
+              , domain :
+                  List
+                    { name : Text, type : Text, wildcard : Bool, zone : Text }
               , domains : List Text
               , env :
                   List { key : Text, scope : Text, type : Text, value : Text }
+              , job :
+                  List
+                    { build_command : Text
+                    , dockerfile_path : Text
+                    , env :
+                        List
+                          { key : Text
+                          , scope : Text
+                          , type : Text
+                          , value : Text
+                          }
+                    , environment_slug : Text
+                    , git : List { branch : Text, repo_clone_url : Text }
+                    , github :
+                        List
+                          { branch : Text, deploy_on_push : Bool, repo : Text }
+                    , gitlab :
+                        List
+                          { branch : Text, deploy_on_push : Bool, repo : Text }
+                    , image :
+                        List
+                          { registry : Text
+                          , registry_type : Text
+                          , repository : Text
+                          , tag : Text
+                          }
+                    , instance_count : Natural
+                    , instance_size_slug : Text
+                    , kind : Text
+                    , name : Text
+                    , run_command : Text
+                    , source_dir : Text
+                    }
               , name : Text
               , region : Text
               , service :
@@ -52,8 +88,16 @@
                           , timeout_seconds : Natural
                           }
                     , http_port : Natural
+                    , image :
+                        List
+                          { registry : Text
+                          , registry_type : Text
+                          , repository : Text
+                          , tag : Text
+                          }
                     , instance_count : Natural
                     , instance_size_slug : Text
+                    , internal_ports : List Natural
                     , name : Text
                     , routes : List { path : Text }
                     , run_command : Text
@@ -105,10 +149,16 @@
                     , gitlab :
                         List
                           { branch : Text, deploy_on_push : Bool, repo : Text }
+                    , image :
+                        List
+                          { registry : Text
+                          , registry_type : Text
+                          , repository : Text
+                          , tag : Text
+                          }
                     , instance_count : Natural
                     , instance_size_slug : Text
                     , name : Text
-                    , routes : List { path : Text }
                     , run_command : Text
                     , source_dir : Text
                     }
@@ -135,8 +185,37 @@
                   , production : Bool
                   , version : Text
                   }
+            , domain :
+                List { name : Text, type : Text, wildcard : Bool, zone : Text }
             , domains : List Text
             , env : List { key : Text, scope : Text, type : Text, value : Text }
+            , job :
+                List
+                  { build_command : Text
+                  , dockerfile_path : Text
+                  , env :
+                      List
+                        { key : Text, scope : Text, type : Text, value : Text }
+                  , environment_slug : Text
+                  , git : List { branch : Text, repo_clone_url : Text }
+                  , github :
+                      List { branch : Text, deploy_on_push : Bool, repo : Text }
+                  , gitlab :
+                      List { branch : Text, deploy_on_push : Bool, repo : Text }
+                  , image :
+                      List
+                        { registry : Text
+                        , registry_type : Text
+                        , repository : Text
+                        , tag : Text
+                        }
+                  , instance_count : Natural
+                  , instance_size_slug : Text
+                  , kind : Text
+                  , name : Text
+                  , run_command : Text
+                  , source_dir : Text
+                  }
             , name : Text
             , region : Text
             , service :
@@ -162,8 +241,16 @@
                         , timeout_seconds : Natural
                         }
                   , http_port : Natural
+                  , image :
+                      List
+                        { registry : Text
+                        , registry_type : Text
+                        , repository : Text
+                        , tag : Text
+                        }
                   , instance_count : Natural
                   , instance_size_slug : Text
+                  , internal_ports : List Natural
                   , name : Text
                   , routes : List { path : Text }
                   , run_command : Text
@@ -203,10 +290,16 @@
                       List { branch : Text, deploy_on_push : Bool, repo : Text }
                   , gitlab :
                       List { branch : Text, deploy_on_push : Bool, repo : Text }
+                  , image :
+                      List
+                        { registry : Text
+                        , registry_type : Text
+                        , repository : Text
+                        , tag : Text
+                        }
                   , instance_count : Natural
                   , instance_size_slug : Text
                   , name : Text
-                  , routes : List { path : Text }
                   , run_command : Text
                   , source_dir : Text
                   }

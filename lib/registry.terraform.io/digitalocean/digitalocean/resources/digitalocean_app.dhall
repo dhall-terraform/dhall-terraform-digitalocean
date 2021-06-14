@@ -23,6 +23,15 @@
                         , version : Optional Text
                         }
                     )
+              , domain :
+                  Optional
+                    ( List
+                        { name : Text
+                        , type : Optional Text
+                        , wildcard : Optional Bool
+                        , zone : Optional Text
+                        }
+                    )
               , env :
                   Optional
                     ( List
@@ -30,6 +39,61 @@
                         , scope : Optional Text
                         , type : Optional Text
                         , value : Optional Text
+                        }
+                    )
+              , job :
+                  Optional
+                    ( List
+                        { build_command : Optional Text
+                        , dockerfile_path : Optional Text
+                        , environment_slug : Optional Text
+                        , instance_count : Optional Natural
+                        , instance_size_slug : Optional Text
+                        , kind : Optional Text
+                        , name : Text
+                        , run_command : Optional Text
+                        , source_dir : Optional Text
+                        , env :
+                            Optional
+                              ( List
+                                  { key : Optional Text
+                                  , scope : Optional Text
+                                  , type : Optional Text
+                                  , value : Optional Text
+                                  }
+                              )
+                        , git :
+                            Optional
+                              ( List
+                                  { branch : Optional Text
+                                  , repo_clone_url : Optional Text
+                                  }
+                              )
+                        , github :
+                            Optional
+                              ( List
+                                  { branch : Optional Text
+                                  , deploy_on_push : Optional Bool
+                                  , repo : Optional Text
+                                  }
+                              )
+                        , gitlab :
+                            Optional
+                              ( List
+                                  { branch : Optional Text
+                                  , deploy_on_push : Optional Bool
+                                  , repo : Optional Text
+                                  }
+                              )
+                        , image :
+                            Optional
+                              ( List
+                                  { registry : Optional Text
+                                  , registry_type : Text
+                                  , repository : Text
+                                  , tag : Optional Text
+                                  }
+                              )
                         }
                     )
               , service :
@@ -41,6 +105,7 @@
                         , http_port : Optional Natural
                         , instance_count : Optional Natural
                         , instance_size_slug : Optional Text
+                        , internal_ports : Optional (List Natural)
                         , name : Text
                         , run_command : Optional Text
                         , source_dir : Optional Text
@@ -85,6 +150,15 @@
                                   , period_seconds : Optional Natural
                                   , success_threshold : Optional Natural
                                   , timeout_seconds : Optional Natural
+                                  }
+                              )
+                        , image :
+                            Optional
+                              ( List
+                                  { registry : Optional Text
+                                  , registry_type : Text
+                                  , repository : Text
+                                  , tag : Optional Text
                                   }
                               )
                         , routes : Optional (List { path : Optional Text })
@@ -180,7 +254,15 @@
                                   , repo : Optional Text
                                   }
                               )
-                        , routes : Optional (List { path : Optional Text })
+                        , image :
+                            Optional
+                              ( List
+                                  { registry : Optional Text
+                                  , registry_type : Text
+                                  , repository : Text
+                                  , tag : Optional Text
+                                  }
+                              )
                         }
                     )
               }
@@ -211,6 +293,15 @@
                       , version : Optional Text
                       }
                   )
+            , domain :
+                Optional
+                  ( List
+                      { name : Text
+                      , type : Optional Text
+                      , wildcard : Optional Bool
+                      , zone : Optional Text
+                      }
+                  )
             , env :
                 Optional
                   ( List
@@ -218,6 +309,61 @@
                       , scope : Optional Text
                       , type : Optional Text
                       , value : Optional Text
+                      }
+                  )
+            , job :
+                Optional
+                  ( List
+                      { build_command : Optional Text
+                      , dockerfile_path : Optional Text
+                      , environment_slug : Optional Text
+                      , instance_count : Optional Natural
+                      , instance_size_slug : Optional Text
+                      , kind : Optional Text
+                      , name : Text
+                      , run_command : Optional Text
+                      , source_dir : Optional Text
+                      , env :
+                          Optional
+                            ( List
+                                { key : Optional Text
+                                , scope : Optional Text
+                                , type : Optional Text
+                                , value : Optional Text
+                                }
+                            )
+                      , git :
+                          Optional
+                            ( List
+                                { branch : Optional Text
+                                , repo_clone_url : Optional Text
+                                }
+                            )
+                      , github :
+                          Optional
+                            ( List
+                                { branch : Optional Text
+                                , deploy_on_push : Optional Bool
+                                , repo : Optional Text
+                                }
+                            )
+                      , gitlab :
+                          Optional
+                            ( List
+                                { branch : Optional Text
+                                , deploy_on_push : Optional Bool
+                                , repo : Optional Text
+                                }
+                            )
+                      , image :
+                          Optional
+                            ( List
+                                { registry : Optional Text
+                                , registry_type : Text
+                                , repository : Text
+                                , tag : Optional Text
+                                }
+                            )
                       }
                   )
             , service :
@@ -229,6 +375,7 @@
                       , http_port : Optional Natural
                       , instance_count : Optional Natural
                       , instance_size_slug : Optional Text
+                      , internal_ports : Optional (List Natural)
                       , name : Text
                       , run_command : Optional Text
                       , source_dir : Optional Text
@@ -273,6 +420,15 @@
                                 , period_seconds : Optional Natural
                                 , success_threshold : Optional Natural
                                 , timeout_seconds : Optional Natural
+                                }
+                            )
+                      , image :
+                          Optional
+                            ( List
+                                { registry : Optional Text
+                                , registry_type : Text
+                                , repository : Text
+                                , tag : Optional Text
                                 }
                             )
                       , routes : Optional (List { path : Optional Text })
@@ -368,7 +524,15 @@
                                 , repo : Optional Text
                                 }
                             )
-                      , routes : Optional (List { path : Optional Text })
+                      , image :
+                          Optional
+                            ( List
+                                { registry : Optional Text
+                                , registry_type : Text
+                                , repository : Text
+                                , tag : Optional Text
+                                }
+                            )
                       }
                   )
             }

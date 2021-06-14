@@ -9,6 +9,7 @@
     , name : Text
     , redirect_http_to_https : Optional Bool
     , region : Text
+    , size : Optional Text
     , status : Optional Text
     , urn : Optional Text
     , vpc_uuid : Optional Text
@@ -52,6 +53,7 @@
   , id = None Text
   , ip = None Text
   , redirect_http_to_https = None Bool
+  , size = None Text
   , status = None Text
   , urn = None Text
   , vpc_uuid = None Text

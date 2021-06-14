@@ -32,6 +32,7 @@
     , name : Text
     , redirect_http_to_https : Optional Bool
     , region : Optional Text
+    , size : Optional Text
     , status : Optional Text
     , sticky_sessions :
         Optional
@@ -74,6 +75,7 @@
   , ip = None Text
   , redirect_http_to_https = None Bool
   , region = None Text
+  , size = None Text
   , status = None Text
   , sticky_sessions =
       None
